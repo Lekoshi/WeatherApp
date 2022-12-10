@@ -1,0 +1,118 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#location-info {
+    color: rgb(193, 138, 255);
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    top: 20%;
+}
+#footer {
+    text-align: center;
+    color: rgb(193, 138, 255);
+}
+.card {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.199);
+    color: rgb(193, 138, 255);
+}
+.slick-prev, .slick-next {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgba(26, 26, 26, 0.527);
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: rgb(193, 138, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+.slick-prev:hover, .slick-next:hover{
+    color: #fff;
+    background-color: rgba(26, 26, 26, 0.336);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+/*Tooltip*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,700,700i');
+.qtip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color:rgb(193, 138, 255);
+  box-sizing: border-box;
+  font-style: normal;
+  transition:all .25s ease-in-out
+}
+.qtip:hover {
+    color: rgb(123, 29, 230);
+    border: 0;
+}
+.qtip:before {
+  content: attr(data-tip);
+  font-size: 14px;
+  position: absolute;
+  background: rgba(10, 20, 30, 0.5);
+  color: #fff;
+  line-height: 1.2em;
+  padding: 0.5em;
+  font-style: normal;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  min-width: 320px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 600
+}
+.qtip:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: '';
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out
+}
+.qtip:hover:before,
+.qtip:hover:after {
+  visibility: visible;
+  opacity: 1
+}
+.qtip.tip-top:before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 8px));
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.qtip.tip-top:after {
+  border-width: 8px 8px 0 8px;
+  border-color: rgba(10, 20, 30, 0.85) transparent transparent transparent;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

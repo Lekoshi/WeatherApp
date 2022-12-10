@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/tooltip.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="warning" class="row justify-content-center align-items-center" style="min-height: 100vh">
+            <div class="col-6 card text-center p-5">
+                To use this feature, you must first allow geolocation tracking in your browser 
+            </div>
+        </div>
+        <div id="warning2" class="row justify-content-center align-items-center d-none" style="min-height: 100vh">
+            <div class="col-6 card text-center p-5">
+                A problem occurred, it will not be possible to access this feature
+            </div>
+        </div>
+        <div class="row">
+            <div id="location-info" class="col-12 text-center d-none h3 position-absolute"></div>
+        </div>
+        <div id="weather-cards-row" class="row justify-content-center align-items-center d-none" style="min-height: 100vh">        
+            <div class="col-1">
+                <button type="button" class="slick-prev float-end">←</button>
+            </div>
+            <div class="col-10">
+                <div id="weather-cards" class="text-center"></div>
+            </div>
+            <div class="col-1">
+                <button type="button" class="slick-next">→</button>
+            </div>
+            <div id="footer" class="h6 position-absolute bottom-0">
+                Made by Lekoshi
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script>
+        getWeather();
+    </script>
+</body>
+</html>
